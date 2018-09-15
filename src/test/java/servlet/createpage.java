@@ -31,12 +31,7 @@ public class createpage extends HttpServlet {
 			String d=req.getParameter("date");
 			String e=req.getParameter("status");
 			
-			String sql= "INSERT INTO avt(product, pdesc, cont, datee, statuss ) VALUES ('"+a+"', '"+b+"','"+c+"','"+d+"','"+e+"' ) RETURNING *;";
-			ResultSet rs1= statement.executeQuery(sql);
-			
-			String sql1= "SELECT  * FROM avt;";
-			ResultSet rs= statement.executeQuery(sql1);
-			
+						
 			
 			        out.println("<html>");
 					out.println("<head>");
