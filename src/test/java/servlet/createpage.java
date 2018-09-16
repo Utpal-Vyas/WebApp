@@ -22,8 +22,8 @@ public class createpage extends HttpServlet {
 			String password="postgres";
 		
 						
-			//Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
-			//Statement statement = connection.createStatement();
+			Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
+			Statement statement = connection.createStatement();
 			
 			String a=req.getParameter("product");
 			String b=req.getParameter("problemdescription");
