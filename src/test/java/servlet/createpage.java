@@ -31,12 +31,6 @@ public class createpage extends HttpServlet {
 			String d=req.getParameter("date");
 			String e=req.getParameter("status");
 			
-			String sql= "INSERT INTO avt(product, pdesc, cont, datee, statuss ) VALUES ('"+a+"', '"+b+"','"+c+"','"+d+"','"+e+"' ) RETURNING *;";
-			ResultSet rs1= statement.executeQuery(sql);
-			
-			String sql1= "SELECT  * FROM avt;";
-			ResultSet rs= statement.executeQuery(sql1);
-			
 			
 			        out.println("<html>");
 					out.println("<head>");
@@ -70,23 +64,6 @@ public class createpage extends HttpServlet {
 					out.println("<th style="+"color:#9a965b;"+">Date</th>");
 					out.println("<th style="+"color:#9a965b;"+">Status</th>");
 					out.println("</tr>");
-					while(rs.next())
-					{
-						String tn=rs.getString("tnum");
-						String prod=rs.getString("product");
-						String pd=rs.getString("pdesc");
-						String cont=rs.getString("cont");
-						String date=rs.getString("datee");
-						String stat=rs.getString("statuss");
-						out.println("<tr>");
-						out.println("<th>"+tn+"</th>");
-						out.println("<th>"+prod+"</th>");
-						out.println("<th>"+pd+"</th>");
-						out.println("<th>"+cont+"</th>");
-						out.println("<th>"+date+"</th>");
-						out.println("<th>"+stat+"</th>");
-						out.println("</tr>");
-					}
 					System.out.println("Crete Ticket Unit Test Passed");
 					out.println("<table>");
 		}
