@@ -55,6 +55,13 @@
 			<version>1.9.5</version>
 		</dependency>
 	</dependencies>
+	<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>utpalvyas-releases</name>
+        <url>https://utpalvyas.jfrog.io/utpalvyas/libs-release-local</url>
+    </repository>
+</distributionManagement>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 					
