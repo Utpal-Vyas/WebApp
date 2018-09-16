@@ -16,14 +16,12 @@ public class viewticket extends HttpServlet {
 		try
 		{
 			Class.forName("org.postgresql.Driver");
-			String jdbcUrl="jdbc:postgresql://18.136.204.7:5432/postgres";
+			String jdbcUrl="jdbc:postgresql://13.229.206.254:5432/postgres";
 			String username="postgres";
-			String password="";
+			String password="postgres";
 						
 			Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
 			Statement statement = connection.createStatement();
-			String sql= "SELECT  * FROM avt;";
-			ResultSet rs= statement.executeQuery(sql);
 			        out.println("<html>");
 					out.println("<head>");
 					out.println("<title>Repair Page</title>");
@@ -56,23 +54,6 @@ public class viewticket extends HttpServlet {
 					out.println("<th style="+"color:#9a965b;"+">Date</th>");
 					out.println("<th style="+"color:#9a965b;"+">Status</th>");
 					out.println("</tr>");
-					while(rs.next())
-					{
-						String tn=rs.getString("tnum");
-						String prod=rs.getString("product");
-						String pd=rs.getString("pdesc");
-						String cont=rs.getString("cont");
-						String date=rs.getString("datee");
-						String stat=rs.getString("statuss");
-						out.println("<tr>");
-						out.println("<th>"+tn+"</th>");
-						out.println("<th>"+prod+"</th>");
-						out.println("<th>"+pd+"</th>");
-						out.println("<th>"+cont+"</th>");
-						out.println("<th>"+date+"</th>");
-						out.println("<th>"+stat+"</th>");
-						out.println("</tr>");
-					}
 					out.println("<table>");
 		}
 		catch(ClassNotFoundException cnfe)
