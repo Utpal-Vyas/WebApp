@@ -1,9 +1,9 @@
 package functionaltest;
 
 import java.util.concurrent.TimeUnit;
-//import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,8 +13,8 @@ import org.testng.annotations.Test;
 
 public class ftat {
 	
-	//public HtmlUnitDriver driver;
-	public WebDriver driver;
+	public HtmlUnitDriver driver;
+	//public WebDriver driver;
 	public WebDriverWait wait;
 	public String URL = "http://18.136.204.7:8080/QAWebapp/";
 	public String URL1 = "http://18.136.204.7:8080/QAWebapp/avncreatepage.jsp";
@@ -24,8 +24,8 @@ public class ftat {
 	 
 	@Test(priority = 0)
 	public void logintest() {
-		//driver = new HtmlUnitDriver();
-		driver= new FirefoxDriver();
+		driver = new HtmlUnitDriver();
+		//driver= new FirefoxDriver();
 		wait = new WebDriverWait(driver, 50);
 		driver.get(URL);
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
