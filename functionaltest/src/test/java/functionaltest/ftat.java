@@ -26,7 +26,7 @@ public class ftat {
 	public void logintest() {
 		//driver = new HtmlUnitDriver();
 		driver= new FirefoxDriver();
-		wait = new WebDriverWait(driver, 20);
+		wait = new WebDriverWait(driver, 50);
 		driver.get(URL);
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		// Login Page content check
