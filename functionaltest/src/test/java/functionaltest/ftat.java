@@ -78,7 +78,7 @@ public class ftat {
 		driver.findElement(By.name("problemdescription")).clear();
 		driver.findElement(By.name("problemdescription")).sendKeys("Increase Bandwidth");
 		driver.findElement(By.name("contact")).sendKeys("Arun");
-		driver.findElement(By.name("date")).sendKeys("03/03/2018");
+		driver.findElement(By.name("date")).sendKeys("03/03/2017");
 		driver.findElement(By.xpath("//button[text()='Submit']")).click();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//h2[text()='Repair Ticket Page']")).isDisplayed();
